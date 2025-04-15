@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TeleportingTrail : MonoBehaviour
 {
-    [SerializeField] private float teleportDistance = 50f;
+    [SerializeField] private float teleportDistance = 5f;
 
     TrailRenderer trailRenderer;
     Vector2 position;
