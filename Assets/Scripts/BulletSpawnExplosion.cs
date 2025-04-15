@@ -6,6 +6,9 @@ public class BulletExplosion : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        if (collision.CompareTag("Asteroid"))
+        {
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+        }
     }
 }
