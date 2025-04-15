@@ -8,13 +8,14 @@ public class TeleportingTrail : MonoBehaviour
     Vector2 position;
     Vector2 previousPosition;
 
+    // Connect to our trail renderer component
     void Start()
     {
         trailRenderer = GetComponent<TrailRenderer>();
-        position = transform.position;
-        previousPosition = position;
     }
 
+    // We check if the distance between the current position and the previous position is greater than the teleport distance.
+    // If so, we clear the trail renderer to prevent graphical glitches.
     void Update()
     {
         previousPosition = position;

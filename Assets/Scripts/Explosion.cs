@@ -3,7 +3,8 @@ using UnityEngine;
 public class Explosion : MonoBehaviour
 {
     float lifetime = 0.5f; // Lifetime of the explosion effect
-    // Update is called once per frame
+
+    // The explosion despawns after its lifetime
     void Update()
     {
         lifetime -= Time.deltaTime;
